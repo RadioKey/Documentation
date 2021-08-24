@@ -135,7 +135,7 @@ persistence false
 Connect to response topic to check that hub is working and may listen to commands from moquitto server
 
 ```
-mosquitto_sub -h {publicIp} -{port} -t response
+mosquitto_sub -h {publicIp} -p {port} -t response
 ```
 
 This will show heartbeats:
@@ -144,8 +144,11 @@ This will show heartbeats:
 {"command":"heartbeat","mac":"AA:AA:AA:AA:AA:AA","deviceId":"HUBESP01","protocolVersion":"0.0.1"}
 ```
 
-Now you may send commands to concrete hub using its max address
+Now you may send commands to concrete hub using it's MAC address:
 
+```
+mosquitto_pub -h {publicIp} -p {port} -t "AA:AA:AA:AA:AA:AA" -m "{"command": "send", "protocol": "1", "repeats": "25", "pulseLength": "315", "code": "14607921", "bitLength": "24"}"
+```
 
 ## MQTT Communication protocol
 
