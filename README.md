@@ -10,6 +10,13 @@
  * https://www.espressif.com/en/support/download/other-tools (Flash Download Tools (ESP8266 & ESP32 & ESP32-S2))
  * https://github.com/espressif/esptool
  
+#### Troubleshooting
+
+* If you get `[upload] could not open port /dev/ttyACM0: [Errno 13] Permission denied: '/dev/ttyACM0'` error, try:
+```
+sudo chmod a+rw /dev/ttyACM0
+```
+
 ### Controllers
 
 #### Firmware components
