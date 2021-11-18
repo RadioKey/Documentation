@@ -140,6 +140,12 @@ listener {port} {publicIp}
 persistence false
 ```
 
+Configure credentials:
+
+```
+sudo mosquitto_passwd /etc/mosquitto/pwfile your_user_name
+```
+
 Connect to response topic to check that hub is working and may listen to commands from moquitto server
 
 ```
