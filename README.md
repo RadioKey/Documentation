@@ -14,7 +14,7 @@
 
 * If you get `[upload] could not open port /dev/ttyACM0: [Errno 13] Permission denied: '/dev/ttyACM0'` error, try:
 ```
-sudo usermod -a -G tty {YOUR_USER_NAME}
+sudo usermod -a -G tty ${USER}
 sudo chmod a+rw /dev/ttyACM0
 ```
 
